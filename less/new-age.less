@@ -62,6 +62,17 @@ p {
             color: darken(@tum, 10%);
         }
     }
+    .navbar-brand {
+        padding: 0px;
+        display: flex;
+        align-items: center;
+        >svg {
+            height: 100%;
+            padding: 7px 14px;
+            width: 64px;
+            fill: @tum;
+        }
+    }
     .navbar-header .navbar-toggle {
         font-size: 12px;
         color: @gray-darker;
@@ -101,6 +112,9 @@ p {
             &:focus {
                 color: white;
             }
+            > svg {
+                fill: white;
+            }
         }
         .nav > li > a,
         .nav > li > a:focus {
@@ -117,6 +131,9 @@ p {
                 &:hover,
                 &:focus {
                     color: @tum;
+                }
+                > svg {
+                    fill: @tum;
                 }
             }
             .nav > li > a,
@@ -375,6 +392,14 @@ section.contact {
                     }
                 }
             }
+            &.social-chat {
+                a {
+                    background-color: @chat;
+                    &:hover {
+                        background-color: darken(@chat, 5%);
+                    }
+                }
+            }
         }
     }
 }
@@ -473,4 +498,9 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: @gray-darker;
+}
+
+// Gitter
+.gitter-chat-embed {
+    z-index: 999999;
 }
